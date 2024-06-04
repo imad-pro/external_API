@@ -11,9 +11,6 @@ app.use(express.static("public"));
 // Use the environment variable for the API key
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-// Print the GROQ API key to the command line
-console.log("GROQ API Key:", groq.apiKey);
-
 app.get("/", (req, res) => {
   res.render("index");
 });
